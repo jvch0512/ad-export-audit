@@ -1,0 +1,25 @@
+15 accounts, 12 findings
+CRITICAL AD001 svc-backup
+         privileged account with an SPN: Kerberoasting it hands over a domain admin password hash
+CRITICAL AD008 legacy-print
+         PASSWD_NOTREQD is set: the account may have an empty password
+HIGH     AD001 svc-sql
+         user account with 1 SPN(s) can be Kerberoasted
+HIGH     AD002 old-app
+         Kerberos pre-authentication is off: the password hash can be requested without credentials (AS-REP roasting)
+HIGH     AD003 (domain)
+         7 enabled Domain Admins (limit 5): every one is a path to full compromise
+HIGH     AD004 adm-bruno
+         privileged account whose password never expires
+HIGH     AD004 svc-backup
+         privileged account whose password never expires
+HIGH     AD005 adm-carla
+         enabled but no logon for 194 days and privileged: disable it
+HIGH     AD006 jump-host
+         unconstrained delegation: anyone who compromises it can impersonate any user that authenticates to it
+MEDIUM   AD005 legacy-print
+         enabled but no logon for 590 days: disable it
+MEDIUM   AD007 adm-bruno
+         privileged password not changed for 1077 days
+MEDIUM   AD007 svc-backup
+         privileged password not changed for 2478 days
