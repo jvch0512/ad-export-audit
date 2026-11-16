@@ -2,6 +2,8 @@
 
 The first thing an Active Directory review looks for is not an exotic exploit, it is accounts: service accounts that can be Kerberoasted, users without pre-authentication, a long list of Domain Admins, privileged passwords nobody has changed since 2021. ad-export-audit reads a standard `Get-ADUser` export and lists them.
 
+![Terminal demo of ad-export-audit on its sample data](docs/demo.svg)
+
 **Live demo:** https://jvch0512.github.io/ad-export-audit/ (a report on the synthetic export in `examples/`)
 
 C# on .NET 8, no NuGet packages. It reads a CSV, so it never touches your directory and can run anywhere.
